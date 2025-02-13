@@ -1,0 +1,6 @@
+UPDATE Employee
+SET SALARY = SALARY * 1.1
+WHERE DEPARTMENT = 'IT';
+
+
+-- SELECT * FROM Employee;

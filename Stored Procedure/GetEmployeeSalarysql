@@ -1,0 +1,18 @@
+CREATE PROCEDURE GetEmployeeSalary(@EmployeeID INT, @Salary DECIMAL(10,2) OUTPUT)
+AS
+BEGIN
+
+    SELECT @Salary = Salary
+    FROM Employee
+    WHERE ID = @EmployeeID;
+
+END 
+
+
+DECLARE @EmployeeSalary DECIMAL(10,2);
+EXECUTE dbo.GetEmployeeSalary @EmployeeID = 2 , @Salary = @EmployeeSalary OUTPUT;
+SELECT @EmployeeSalary;
+
+
+
+-- Get the employee salary and store in variable.

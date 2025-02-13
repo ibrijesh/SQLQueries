@@ -1,0 +1,7 @@
+SELECT NAME, DEPARTMENT, SALARY
+FROM Employee e 
+WHERE SALARY > (
+   SELECT AVG(SALARY)
+   FROM Employee 
+   WHERE Department = e.DEPARTMENT
+);
